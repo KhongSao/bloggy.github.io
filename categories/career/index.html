@@ -10,8 +10,8 @@
 
 
 
-<meta name="author" content="" />
-<meta name="description" content="" />
+<meta name="author" content="Chris" />
+<meta name="description" content="My second brain" />
 
 
 
@@ -21,16 +21,19 @@
 
 
 <meta property="og:title" content="Career" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="My second brain" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://khongsao.github.io/bloggy.github.io/categories/career/" />
+<meta property="og:image" content="https://khongsao.github.io/bloggy.github.io/me/background.jpg"/>
 <meta property="og:updated_time" content="2021-02-19T17:44:11+00:00" />
 
 
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://khongsao.github.io/bloggy.github.io/me/background.jpg"/>
+
 <meta name="twitter:title" content="Career"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="My second brain"/>
 
 
 <link rel="stylesheet" href="/bloggy.github.io/css/semantic.min.css" />
@@ -45,11 +48,38 @@
   }
 
   
-
+  a:not(.ui.button) {
+    color: seagreen !important;
+  }
   
 
   
+  .inverted a:not(.ui.button),
+  .inverted a:not(.ui.button):hover {
+     color: darkseagreen !important;
+  }
+  
 
+  
+  body.default {
+    
+    background-color: #fff;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+  body.dark {
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
   
 </style>
 
@@ -70,6 +100,14 @@
     <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/khongsao.github.io\/bloggy.github.io\/'"></i>
   </div>
   
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
   
 </nav>
 
@@ -82,10 +120,12 @@
 <header class="ui basic very padded segment dream-header">
   <div class="ui small circular image">
     
+    <img src="/bloggy.github.io/me/chrisavatar.jpg" />
+    
   </div>
 
   <div class="content">
-    <h1 class="ui medium header">&#39;s blog<div class="sub header"></div>
+    <h1 class="ui medium header">Chris<div class="sub header">The hardest thing to write is your own name</div>
     </h1>
 
     <article class="ui horizontal list">
@@ -196,10 +236,12 @@
             <header class="ui basic very padded segment dream-header">
   <div class="ui small circular image">
     
+    <img src="/bloggy.github.io/me/chrisavatar.jpg" />
+    
   </div>
 
   <div class="content">
-    <h1 class="ui medium header">&#39;s blog<div class="sub header"></div>
+    <h1 class="ui medium header">Chris<div class="sub header">The hardest thing to write is your own name</div>
     </h1>
 
     <article class="ui horizontal list">
@@ -294,9 +336,27 @@
       <h3 class="ui header">Social Links</h3>
       <nav class="ui secondary menu dream-menu dream-socials">
   
-
+  <div class="item">
+    <a href="/bloggy.github.io/index.xml">
+      <i class="large rss square icon" title="RSS"></i>
+    </a>
+  </div>
   
 
+  
+  <div class="item">
+    <a href="mailto:justpressr@protonmail.com">
+      <i class="large mail icon" title="Email"></i>
+    </a>
+  </div>
+  
+
+  
+  <div class="item">
+    <a href="https://twitter.com/c4history" target="_blank">
+      <i class="large twitter icon" title="Twitter"></i>
+    </a>
+  </div>
   
 
   
@@ -334,7 +394,7 @@
     <script>
   window.defaultDark =  null 
   window.backgroundDark =  null 
-  window.backgroundImageDark =  null 
+  window.backgroundImageDark = "/me/background.jpg"
   window.darkNav =  null 
   window.hasTwitterEmbed =  null 
 
@@ -371,6 +431,28 @@
 <script src="/bloggy.github.io/js/masonry.pkgd.min.js"></script>
 <script src="/bloggy.github.io/js/grid.js"></script>
 
+
+    
+    <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/khongsao.github.io\/bloggy.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/bloggy.github.io/js/search.js"></script>
 
     
 

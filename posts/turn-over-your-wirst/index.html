@@ -26,12 +26,15 @@
  Quote 2) 4chan  &ldquo;I never got my people would kill themselves So if you want to die you obviously don&rsquo;t give a shit. Like, about anyone. Because if there is anyone who loves you, you don&rsquo;t give a fuck about them, or hurting them, and if there is not, there is no one to give a shit about." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://khongsao.github.io/bloggy.github.io/posts/turn-over-your-wirst/" />
+<meta property="og:image" content="https://khongsao.github.io/bloggy.github.io/me/background.jpg"/>
 <meta property="article:published_time" content="2021-02-06T17:44:11+00:00" />
 <meta property="article:modified_time" content="2021-02-19T17:44:11+00:00" />
 
 
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://khongsao.github.io/bloggy.github.io/me/background.jpg"/>
+
 <meta name="twitter:title" content="Turn Over Your Wrists"/>
 <meta name="twitter:description" content="Quote 1) Seneca  Can you no longer see a road to freedom? It&rsquo;s right in front of you. You need only turn over your wrists.
  Quote 2) 4chan  &ldquo;I never got my people would kill themselves So if you want to die you obviously don&rsquo;t give a shit. Like, about anyone. Because if there is anyone who loves you, you don&rsquo;t give a fuck about them, or hurting them, and if there is not, there is no one to give a shit about."/>
@@ -49,16 +52,47 @@
   }
 
   
-
+  a:not(.ui.button) {
+    color: seagreen !important;
+  }
   
 
   
+  .inverted a:not(.ui.button),
+  .inverted a:not(.ui.button):hover {
+     color: darkseagreen !important;
+  }
+  
 
+  
+  body.default {
+    
+    background-color: #fff;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+  body.dark {
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
   
 </style>
 
 
     
+
+
+
+<link rel="stylesheet" data-highlight href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/tomorrow.min.css" />
 
 
 
@@ -80,6 +114,14 @@
     <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/khongsao.github.io\/bloggy.github.io\/'"></i>
   </div>
   
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
   
 </nav>
 
@@ -125,7 +167,11 @@
   </aside>
   <div class="sixteen wide mobile sixteen wide tablet twelve wide computer column markdown-body dream-single" id="dream-save-post-as-img">
     
-    <section class="ui top attached segment">
+    <div class="ui top attached segment cover">
+      <div class="cover-img" style="background-image: url(/img/cover.jpg);"></div>
+    </div>
+    
+    <section class="ui attached segment">
       <header>
         <h1 class="ui large header">Turn Over Your Wrists<div class="sub header">
             @
@@ -194,10 +240,12 @@ Sometimes I wish I was suicidal. I&rsquo;ve pulled a barrel out of my mouth and 
             <header class="ui basic very padded segment dream-header">
   <div class="ui small circular image">
     
+    <img src="/bloggy.github.io/me/chrisavatar.jpg" />
+    
   </div>
 
   <div class="content">
-    <h1 class="ui medium header">&#39;s blog<div class="sub header"></div>
+    <h1 class="ui medium header">Chris<div class="sub header">The hardest thing to write is your own name</div>
     </h1>
 
     <article class="ui horizontal list">
@@ -292,9 +340,27 @@ Sometimes I wish I was suicidal. I&rsquo;ve pulled a barrel out of my mouth and 
       <h3 class="ui header">Social Links</h3>
       <nav class="ui secondary menu dream-menu dream-socials">
   
-
+  <div class="item">
+    <a href="/bloggy.github.io/index.xml">
+      <i class="large rss square icon" title="RSS"></i>
+    </a>
+  </div>
   
 
+  
+  <div class="item">
+    <a href="mailto:justpressr@protonmail.com">
+      <i class="large mail icon" title="Email"></i>
+    </a>
+  </div>
+  
+
+  
+  <div class="item">
+    <a href="https://twitter.com/c4history" target="_blank">
+      <i class="large twitter icon" title="Twitter"></i>
+    </a>
+  </div>
   
 
   
@@ -331,7 +397,7 @@ Sometimes I wish I was suicidal. I&rsquo;ve pulled a barrel out of my mouth and 
     <script>
   window.defaultDark =  null 
   window.backgroundDark =  null 
-  window.backgroundImageDark =  null 
+  window.backgroundImageDark = "/me/background.jpg"
   window.darkNav =  null 
   window.hasTwitterEmbed =  null 
 
@@ -368,8 +434,58 @@ Sometimes I wish I was suicidal. I&rsquo;ve pulled a barrel out of my mouth and 
 <script src="/bloggy.github.io/js/post.js"></script>
 
 
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/highlight.min.js"></script>
 
 
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/clojure.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/languages/ocaml.min.js"></script>
+
+
+
+<script>
+  hljs.initHighlightingOnLoad()
+  setHighlightTheme()
+
+  function setHighlightTheme() {
+    var isDark = localStore.getItem('hugo-theme-dream-is-dark')
+    isDark = isDark ? isDark : window.defaultDark ? 'y' : isDark
+
+    var lightTheme = "tomorrow"
+    var darkTheme = "tomorrow-night"
+    var theme = isDark === 'y' ? darkTheme : lightTheme
+
+    $('link[data-highlight]').attr('href', 'https://cdn.jsdelivr.net/gh/highlightjs/cdn-release/build/styles/' + theme + '.min.css')
+    $('pre').css('background', isDark === 'y' ? '#333' : '')
+  }
+</script>
+
+
+
+
+
+    
+    <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/khongsao.github.io\/bloggy.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/bloggy.github.io/js/search.js"></script>
 
     
 

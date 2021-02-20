@@ -10,8 +10,8 @@
 
 
 
-<meta name="author" content="" />
-<meta name="description" content="" />
+<meta name="author" content="Chris" />
+<meta name="description" content="My second brain" />
 
 
 
@@ -21,16 +21,19 @@
 
 
 <meta property="og:title" content="MSB" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="My second brain" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://khongsao.github.io/bloggy.github.io/" />
+<meta property="og:image" content="https://khongsao.github.io/bloggy.github.io/me/background.jpg"/>
 <meta property="og:updated_time" content="2021-02-19T17:44:11+00:00" />
 
 
 
-<meta name="twitter:card" content="summary"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://khongsao.github.io/bloggy.github.io/me/background.jpg"/>
+
 <meta name="twitter:title" content="MSB"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:description" content="My second brain"/>
 
 
 <link rel="stylesheet" href="/bloggy.github.io/css/semantic.min.css" />
@@ -45,11 +48,38 @@
   }
 
   
-
+  a:not(.ui.button) {
+    color: seagreen !important;
+  }
   
 
   
+  .inverted a:not(.ui.button),
+  .inverted a:not(.ui.button):hover {
+     color: darkseagreen !important;
+  }
+  
 
+  
+  body.default {
+    
+    background-color: #fff;
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
+  
+
+  
+  body.dark {
+    
+
+    
+    background-image: url(/me/background.jpg);
+    
+  }
   
 </style>
 
@@ -70,6 +100,14 @@
     <i class="large link home icon" title="Home" onclick="window.location.href = 'https:\/\/khongsao.github.io\/bloggy.github.io\/'"></i>
   </div>
   
+  <div class="item">
+    <i class="large link icon theme-switch" onclick="themeSwitch()"></i>
+  </div>
+  
+  
+  <div class="item">
+    <i class="large link search icon" onclick="toggleSearch()"></i>
+  </div>
   
 </nav>
 
@@ -82,10 +120,12 @@
 <header class="ui basic very padded segment dream-header">
   <div class="ui small circular image">
     
+    <img src="/bloggy.github.io/me/chrisavatar.jpg" />
+    
   </div>
 
   <div class="content">
-    <h1 class="ui medium header">&#39;s blog<div class="sub header"></div>
+    <h1 class="ui medium header">Chris<div class="sub header">The hardest thing to write is your own name</div>
     </h1>
 
     <article class="ui horizontal list">
@@ -239,7 +279,7 @@
     <article class="ui attached segment card dream-card">
   <a class="image" href="https://khongsao.github.io/bloggy.github.io/posts/books/madnessofcrowds/">
     
-    <img src="/img/default4.jpg" alt="Madness of Crowds" />
+    <img src="/img/default2.jpg" alt="Madness of Crowds" />
     
   </a>
 
@@ -256,7 +296,7 @@
   </div>
 
   <div class="extra content">
-    <div class="author">@&nbsp;</div>
+    <div class="author">@&nbsp;Chris</div>
     <div class="reading-time">
       <i class="clock icon"></i>1 minute read</div>
   </div>
@@ -268,7 +308,7 @@
     <article class="ui attached segment card dream-card">
   <a class="image" href="https://khongsao.github.io/bloggy.github.io/posts/books/showyourwork/">
     
-    <img src="/img/default2.jpg" alt="Show Your Work" />
+    <img src="/img/default1.jpg" alt="Show Your Work" />
     
   </a>
 
@@ -285,7 +325,7 @@
   </div>
 
   <div class="extra content">
-    <div class="author">@&nbsp;</div>
+    <div class="author">@&nbsp;Chris</div>
     <div class="reading-time">
       <i class="clock icon"></i>1 minute read</div>
   </div>
@@ -297,7 +337,7 @@
     <article class="ui attached segment card dream-card">
   <a class="image" href="https://khongsao.github.io/bloggy.github.io/posts/final-1pc/">
     
-    <img src="/img/cover.jpg" alt="Final 1%" />
+    <img src="/img/final1pc.jpeg" alt="Final 1%" />
     
   </a>
 
@@ -328,7 +368,7 @@ Let&rsquo;s say then you are in the final 1% or final 300days worth of time with
     <article class="ui attached segment card dream-card">
   <a class="image" href="https://khongsao.github.io/bloggy.github.io/posts/books/countofmonte/">
     
-    <img src="/img/default4.jpg" alt="Count of Monte Cristo" />
+    <img src="/img/default3.jpg" alt="Count of Monte Cristo" />
     
   </a>
 
@@ -345,7 +385,7 @@ Let&rsquo;s say then you are in the final 1% or final 300days worth of time with
   </div>
 
   <div class="extra content">
-    <div class="author">@&nbsp;</div>
+    <div class="author">@&nbsp;Chris</div>
     <div class="reading-time">
       <i class="clock icon"></i>1 minute read</div>
   </div>
@@ -357,7 +397,7 @@ Let&rsquo;s say then you are in the final 1% or final 300days worth of time with
     <article class="ui attached segment card dream-card">
   <a class="image" href="https://khongsao.github.io/bloggy.github.io/posts/korean/itaweonclass/">
     
-    <img src="/img/default4.jpg" alt="Itaewon Class" />
+    <img src="/img/default1.jpg" alt="Itaewon Class" />
     
   </a>
 
@@ -376,7 +416,7 @@ I do because said member of staff was then at a loss for several minutes, for me
   </div>
 
   <div class="extra content">
-    <div class="author">@&nbsp;</div>
+    <div class="author">@&nbsp;Chris</div>
     <div class="reading-time">
       <i class="clock icon"></i>3 minutes read</div>
   </div>
@@ -410,10 +450,12 @@ I do because said member of staff was then at a loss for several minutes, for me
             <header class="ui basic very padded segment dream-header">
   <div class="ui small circular image">
     
+    <img src="/bloggy.github.io/me/chrisavatar.jpg" />
+    
   </div>
 
   <div class="content">
-    <h1 class="ui medium header">&#39;s blog<div class="sub header"></div>
+    <h1 class="ui medium header">Chris<div class="sub header">The hardest thing to write is your own name</div>
     </h1>
 
     <article class="ui horizontal list">
@@ -508,9 +550,27 @@ I do because said member of staff was then at a loss for several minutes, for me
       <h3 class="ui header">Social Links</h3>
       <nav class="ui secondary menu dream-menu dream-socials">
   
-
+  <div class="item">
+    <a href="/bloggy.github.io/index.xml">
+      <i class="large rss square icon" title="RSS"></i>
+    </a>
+  </div>
   
 
+  
+  <div class="item">
+    <a href="mailto:justpressr@protonmail.com">
+      <i class="large mail icon" title="Email"></i>
+    </a>
+  </div>
+  
+
+  
+  <div class="item">
+    <a href="https://twitter.com/c4history" target="_blank">
+      <i class="large twitter icon" title="Twitter"></i>
+    </a>
+  </div>
   
 
   
@@ -548,7 +608,7 @@ I do because said member of staff was then at a loss for several minutes, for me
     <script>
   window.defaultDark =  null 
   window.backgroundDark =  null 
-  window.backgroundImageDark =  null 
+  window.backgroundImageDark = "/me/background.jpg"
   window.darkNav =  null 
   window.hasTwitterEmbed =  null 
 
@@ -585,6 +645,28 @@ I do because said member of staff was then at a loss for several minutes, for me
 <script src="/bloggy.github.io/js/masonry.pkgd.min.js"></script>
 <script src="/bloggy.github.io/js/grid.js"></script>
 
+
+    
+    <div class="ui inverted segment" id="dream-search">
+  <div class="ui search">
+    <div class="ui transparent input">
+      <input class="prompt" type="text" placeholder="Search" />
+    </div>
+    <div class="results"></div>
+  </div>
+</div>
+<script>
+  $(document).ready(function () {
+    $.getJSON('https:\/\/khongsao.github.io\/bloggy.github.io\//index.json', function (data) {
+      $('.ui.search').search({
+        source: data,
+        searchFields: ['title'],
+        showNoResults: true,
+      })
+    })
+  })
+</script>
+<script src="/bloggy.github.io/js/search.js"></script>
 
     
 
